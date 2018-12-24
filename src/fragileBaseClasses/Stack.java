@@ -16,6 +16,7 @@ public class Stack<T> {
     }
 
     public void pushMany(T[] items) {
+        // instead of push by loop
         assert (stackPointer + items.length) <= contents.length : "too many items";
         System.arraycopy(items, 0, contents, stackPointer, items.length);
         stackPointer += items.length;
